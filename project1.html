@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catastrophe 
+        Merely a fresh balance | JIANG Hanbing</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #5D5CDE;
+            --secondary: #FF6B6B;
+            --accent: #7DE1C5;
+            --background: #181818;
+            --text: #FFFFFF;
+            --pixel-size: 4px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Silkscreen', 'VT323', cursive;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: var(--pixel-size) solid var(--primary);
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Silkscreen', 'VT323', cursive;
+            font-size: 1.2rem;
+            color: var(--text);
+            background-color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.1s;
+            border: none;
+        }
+        
+        .back-button:hover {
+            transform: translateY(2px);
+        }
+        
+        .back-button::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--primary);
+        }
+        
+        /* Main Content */
+        .project-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .project-info {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            border: var(--pixel-size) solid var(--text);
+            margin-bottom: 2rem;
+            box-shadow: 
+                var(--pixel-size) var(--pixel-size) 0 0 var(--primary),
+                calc(var(--pixel-size) * 2) calc(var(--pixel-size) * 2) 0 0 var(--secondary);
+        }
+        
+        .project-info h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .project-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+        }
+        
+        /* 按钮容器 */
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        /* 紫色像素风格按钮 */
+        .pixel-button-link {
+            display: inline-block;
+            padding: 1rem 1.5rem;
+            font-family: 'Silkscreen', 'VT323', cursive;
+            font-size: 1.4rem;
+            color: var(--text);
+            background-color: var(--primary);
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.1s;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .pixel-button-link::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .pixel-button-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 4px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .pixel-button-link:hover {
+            transform: translateY(2px);
+        }
+        
+        .pixel-button-link:active {
+            transform: translateY(4px);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--text);
+            border-top: var(--pixel-size) solid var(--primary);
+            margin-top: 3rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2.2rem;
+            }
+            
+            .project-info h2 {
+                font-size: 1.6rem;
+            }
+            
+            .project-info p {
+                font-size: 1.2rem;
+            }
+            
+            .back-button, .pixel-button-link {
+                font-size: 1.2rem;
+                padding: 0.8rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="web.html" class="back-button">← Back to Home</a>
+        <h1 class="project-title">Catastrophe Merely a fresh balance</h1>
+    </header>
+    
+    <main class="project-container">
+        <div class="project-info">
+            <h2>About This Project</h2>
+            <p>This is a visual novel game demo that explores themes of balance and catastrophe. 
+                A human is exiled to a deserted area. His portable sensor shows that a beast tide
+                will sweep across his location in 10 days.
+                To evade the beast tide and locate a refuge, he must figure out a way to survive in
+                this deserted area.
+                However, you are not a human; you are one of the animals lurking around human,
+                seeking a way to survive...</p>
+            
+            <h2>Game Type</h2>
+            <p>Visual Novel, Choice-Based Narrative, Indie Game</p>
+            
+            <h2>Links</h2>
+            <p>Use the links below to play the demo or learn about the development process:</p>
+            
+            <div class="button-container">
+                <!-- Play Demo Button -->
+                <a href="https://www.figma.com/proto/A1ruLbSNxfX301TGoaOowq/%E7%81%BE%E9%9A%BE?node-id=56-369&t=guOABCexRRetOJrk-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=56%3A369&show-proto-sidebar=1" target="_blank" class="pixel-button-link">
+                    Play Demo →
+                </a>
+                
+                <!-- Making Process Button -->
+                <a href="making-process.html" class="pixel-button-link">
+                    Making Process →
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 JIANG Hanbing. All rights reserved.</p>
+    </footer>
+</body>
+</html>

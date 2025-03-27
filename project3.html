@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poverty & Gender Inequality | JIANG Hanbing</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #5D5CDE;
+            --secondary: #FF6B6B;
+            --accent: #7DE1C5;
+            --background: #181818;
+            --text: #FFFFFF;
+            --pixel-size: 4px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Silkscreen', 'VT323', cursive;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: var(--pixel-size) solid var(--primary);
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Silkscreen', 'VT323', cursive;
+            font-size: 1.2rem;
+            color: var(--text);
+            background-color: var(--primary);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.1s;
+            border: none;
+        }
+        
+        .back-button:hover {
+            transform: translateY(2px);
+        }
+        
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--primary);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+        
+        /* Video Container */
+        .video-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border: var(--pixel-size) solid var(--text);
+            box-shadow: 
+                var(--pixel-size) var(--pixel-size) 0 0 var(--primary),
+                calc(var(--pixel-size) * 2) calc(var(--pixel-size) * 2) 0 0 var(--secondary);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+        
+        .video-controls {
+            margin-top: 1rem;
+            text-align: center;
+        }
+        
+        .description {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: rgba(0, 0, 0, 0.3);
+            border: var(--pixel-size) solid var(--text);
+            text-align: center;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--text);
+            border-top: var(--pixel-size) solid var(--primary);
+            margin-top: 3rem;
+        }
+        
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            gap: 2rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .project-title {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="web.html" class="back-button">← Back to Home</a>
+        <h1 class="project-title">Poverty & Gender Inequality</h1>
+        <p class="subtitle">in Hong Kong's Labor Market</p>
+    </header>
+    
+    <main>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <!-- YouTube嵌入播放器 -->
+                <iframe 
+                    src="https://www.youtube.com/embed/SC6CP1YzssA" 
+                    title="Poverty & Gender Inequality in Hong Kong's Labor Market"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <div class="description">
+                <p>This visual research explores wage inequality and gender-based discrimination in Hong Kong's labor market, highlighting the intersection of poverty and gender issues.</p>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <a href="web.html" class="back-button">← Back to Home</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 JIANG Hanbing. All rights reserved.</p>
+    </footer>
+</body>
+</html>

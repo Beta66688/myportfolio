@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Roaming Plan | JIANG Hanbing</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #ffb6e1;
+            --secondary: #fff0b3;
+            --accent: #333333;
+            --text-dark: #222222;
+            --text-light: #ffffff;
+            --pixel-size: 4px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Silkscreen', 'VT323', monospace;
+            background: linear-gradient(to right, var(--secondary) 0%, var(--secondary) 30%, var(--primary) 30%, var(--primary) 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: var(--pixel-size) solid var(--accent);
+        }
+        
+        .back-button {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Silkscreen', 'VT323', monospace;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            background-color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.1s;
+            border: none;
+        }
+        
+        .back-button:hover {
+            transform: translateY(2px);
+        }
+        
+        .project-title {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        /* Main Content */
+        .project-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* 描述部分 */
+        .description-section {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            border: 2px solid var(--accent);
+            margin-bottom: 3rem;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+        
+        .description-text {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+        
+        /* 全宽图片 */
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--accent);
+            margin: 2rem 0;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 图片网格 - 用于两张图片并排 */
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .grid-image {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--accent);
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Event Flow 部分 */
+        .event-flow-section {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border: 2px solid var(--accent);
+            margin-bottom: 3rem;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Online Promotional Planning 部分 */
+        .promotional-section {
+            background-color: var(--primary);
+            padding: 2rem;
+            border: 2px solid var(--accent);
+            margin-bottom: 3rem;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 视频链接样式 */
+        .video-link {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: var(--text-light);
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .video-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* 演示视频部分 */
+        .video-section {
+            background-color: var(--primary);
+            padding: 2rem;
+            border: 2px solid var(--accent);
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        /* 按钮容器 */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3rem;
+        }
+        
+        .nav-button {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            font-family: 'Silkscreen', 'VT323', monospace;
+            font-size: 1.2rem;
+            color: var(--text-light);
+            background-color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        
+        .nav-button:hover {
+            transform: translateY(2px);
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            border-top: var(--pixel-size) solid var(--accent);
+            margin-top: 3rem;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            body {
+                background: linear-gradient(to bottom, var(--secondary) 0%, var(--secondary) 30%, var(--primary) 30%, var(--primary) 100%);
+            }
+            
+            .project-title {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .description-text {
+                font-size: 1.2rem;
+            }
+            
+            .image-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-container {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="web.html" class="back-button">← Back to Home</a>
+        <h1 class="project-title">Sound Roaming Plan</h1>
+        <p class="subtitle">An artistic interactive installation</p>
+    </header>
+    
+    <main class="project-container">
+        <!-- 描述部分 -->
+        <section class="description-section">
+            <h2 class="section-title">Description</h2>
+            <p class="description-text">
+                This is a world of sound. Leave your voice here, along with a sentence to accompany it.
+                We will generate a unique QR code for you. Save the QR code, send it to the backend,
+                and we will receive your voice.
+            </p>
+            <p class="description-text">
+                Then we will 'print' your voice and place it at the exhibition site;
+                When a destined person appears to take it away, it will mark the beginning of your voice's journey.
+                Narrate, listen, medium, blend.
+            </p>
+            <p class="description-text">
+                Through online promotion and offline installations, audiences can obtain a unique electronic music CD by
+                clicking on the webpage, uploading audio, and generating a personalized QR code.
+            </p>
+        </section>
+        
+        <!-- Event Flow 部分 -->
+        <section class="event-flow-section">
+            <h2 class="section-title">Event Flow</h2>
+            <p class="description-text">
+                The event flow demonstrates how users interact with the Sound Roaming Plan installation, 
+                from initial engagement to the completion of the sound exchange process.
+            </p>
+            <img src="portfolio2/1.png" alt="Event Flow Diagram" class="full-width-image">
+        </section>
+        
+        <!-- Online Promotional Planning 部分 - 已更新为两张图片 -->
+        <section class="promotional-section">
+            <h2 class="section-title">Online Promotional Planning</h2>
+            <p class="description-text">
+                The online promotional strategy includes story planning and social media engagement to attract participants
+                and build a community around the sound exchange concept.
+            </p>
+            
+            <!-- 两张图片并排显示 -->
+            <div class="image-grid">
+                <img src="portfolio2/2.png" alt="Online Promotional Planning 1" class="grid-image">
+                <img src="portfolio2/3.png" alt="Online Promotional Planning 2" class="grid-image">
+            </div>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://www.youtube.com/watch?v=r0HnG3Puhc4" target="_blank" class="video-link">Watch Promotional Video</a>
+            </div>
+        </section>
+        
+        <!-- 演示视频部分 -->
+        <section class="video-section">
+            <h2 class="section-title">Demonstration Video</h2>
+            <p style="font-size: 1.4rem; margin-bottom: 1.5rem;">
+                Watch the demonstration video to see how the Sound Roaming Plan works in practice.
+            </p>
+            <a href="https://www.youtube.com/watch?v=rTpyaWoXu40" target="_blank" class="video-link">Watch Demo Video</a>
+        </section>
+        
+        <!-- 导航按钮 -->
+        <div class="button-container">
+            <a href="web.html" class="nav-button">← Back to Home</a>
+            <a href="project3.html" class="nav-button">Next Project →</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 JIANG Hanbing. All rights reserved.</p>
+    </footer>
+</body>
+</html>

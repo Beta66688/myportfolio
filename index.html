@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIANG Hanbing | Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary: #5D5CDE;
+            --secondary: #FF6B6B;
+            --accent: #7DE1C5;
+            --background: #181818;
+            --text: #FFFFFF;
+            --pixel-size: 4px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Silkscreen', 'VT323', cursive;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Pixel Border */
+        .pixel-border {
+            position: relative;
+            border: var(--pixel-size) solid var(--text);
+            box-shadow: 
+                var(--pixel-size) var(--pixel-size) 0 0 var(--primary),
+                calc(var(--pixel-size) * 2) calc(var(--pixel-size) * 2) 0 0 var(--secondary);
+            margin: 20px;
+            padding: 20px;
+        }
+        
+        /* Pixel Art Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, var(--background) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--background) 1px, transparent 1px);
+            background-size: 16px 16px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--primary);
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            color: var(--text);
+        }
+        
+        /* Pixel Art Button */
+        .pixel-button {
+            display: inline-block;
+            padding: 1.2rem 2rem;
+            font-family: 'Silkscreen', 'VT323', cursive;
+            font-size: 1.5rem;
+            color: var(--text);
+            background-color: var(--primary);
+            border: none;
+            text-decoration: none;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.1s;
+        }
+        
+        .pixel-button::before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            right: 4px;
+            bottom: 4px;
+            background-color: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+        
+        .pixel-button::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+            height: 4px;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+        
+        .pixel-button:hover {
+            transform: translateY(2px);
+        }
+        
+        .pixel-button:active {
+            transform: translateY(4px);
+        }
+        
+        /* Character Sprite */
+        .character {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 2rem;
+            image-rendering: pixelated;
+            background: url('image/image4.jpg') no-repeat center;  
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--background);
+            font-size: 0.8rem;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            padding: 4rem 2rem;
+            background-color: var(--background);
+        }
+        
+        .portfolio-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--accent);
+            text-shadow: 4px 4px 0 var(--primary);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-item {
+            border: var(--pixel-size) solid var(--text);
+            padding: var(--pixel-size);
+            background-color: var(--background);
+            transition: transform 0.2s;
+        }
+        
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--primary);
+            margin-bottom: 1rem;
+            image-rendering: pixelated;
+            /* Replace with project images */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            font-size: 0.8rem;
+        }
+        
+        .portfolio-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+            text-shadow: 2px 2px 0 var(--primary); 
+        }
+        
+        .portfolio-item p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .pixel-button {
+                font-size: 1.2rem;
+                padding: 0.8rem 1.2rem;
+            }
+            
+            .portfolio-title {
+                font-size: 2rem;
+            }
+            
+            .portfolio-item h3 {
+                font-size: 1.4rem;
+            }
+            
+            .portfolio-item p {
+                font-size: 1rem;
+            }
+        }
+        
+        /* Footer */
+        footer { 
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.2rem;
+            color: var(--text);
+            border-top: var(--pixel-size) solid var(--primary);
+        }
+        
+        /* Pixel Art Decorations */
+        .pixel-cloud {
+            position: absolute;
+            width: 80px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+        }
+        
+        .cloud1 {
+            top: 15%;
+            left: 10%;
+            animation: float 15s linear infinite;
+        }
+        
+        .cloud2 {
+            top: 25%;
+            right: 15%;
+            animation: float 18s linear infinite reverse;
+        }
+        
+        .cloud3 {
+            bottom: 20%;
+            left: 20%;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="pixel-cloud cloud1"></div>
+            <div class="pixel-cloud cloud2"></div>
+            <div class="pixel-cloud cloud3"></div>
+            <div class="character"></div>
+            
+            <h1 class="hero-title">Hi, I'm JIANG Hanbing</h1>
+            <p class="hero-subtitle">Welcome to my pixel world!</p>
+            
+            <a href="#portfolio" class="pixel-button">Let's start our journey</a>
+        </section>
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio">
+            <h2 class="portfolio-title">My Portfolio</h2>
+            
+            <div class="portfolio-grid">
+                <!-- Portfolio Item 1 -->
+                <a href="project1.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="portfolio-image" style="background: url('image/image1.png') no-repeat center; background-size: cover;"></div>
+                    <h3>Catastrophe Merely a fresh balance</h3>
+                    <p>This is a visual novel game demo.</p>
+                </a>
+                
+                <!-- Portfolio Item 2 -->
+                <a href="project2.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="portfolio-image" style="background: url('image/image2.jpg') no-repeat center; background-size: cover;"></div>
+                    <h3>Sound Roaming Plan</h3>
+                    <p>This is an artistic interactive installation that uses a webpage for interaction during the exhibition.</p>
+                </a>
+                
+                <!-- Portfolio Item 3 -->
+                <a href="project3.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="portfolio-image" style="background: url('image/image6.jpg') no-repeat center; background-size: cover;"></div>
+                    <h3>Poverty & Gender Inequality in Hong Kong's Labor Market</h3>
+                    <p>This is a visual research on wage inequality in Hong Kong.</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 JIANG Hanbing. All rights reserved.</p>
+        </footer>
+    </main>
+</body>
+</html>
