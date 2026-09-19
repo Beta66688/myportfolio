@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-zh="JIANG Hanbing｜个人作品集" data-en="JIANG Hanbing | Pixel Portfolio" >JIANG Hanbing｜个人作品集</title>
+    <title data-zh="JIANG Hanbing｜个人作品集">JIANG Hanbing | Pixel Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Silkscreen&display=swap" rel="stylesheet">
     <style>
         /* Base Styles */
         :root {
@@ -269,11 +270,11 @@
             100% { transform: translateX(0); }
         }
     </style>
-<link rel="stylesheet" href="localization.css">
-<script src="language.js" defer></script>
+<link rel="stylesheet" href="language-only.css">
+<script src="language-only.js" defer></script>
 </head>
-<body>
-<nav class="language-nav" aria-label="Language / 语言"><a class="brand" href="index.html">JH<span> / PORTFOLIO</span></a><div class="language-controls"><button type="button" data-language="zh" aria-pressed="true">中文</button><button type="button" data-language="en" aria-pressed="false">EN</button></div></nav>
+<body class="portfolio-home">
+<div class="language-switch" role="group" aria-label="选择语言 / Choose language"><button type="button" data-language="zh" aria-pressed="false">中文</button><button type="button" data-language="en" aria-pressed="true">EN</button></div>
     <main>
         <!-- Hero Section -->
         <section class="hero">
@@ -282,43 +283,43 @@
             <div class="pixel-cloud cloud3"></div>
             <div class="character"></div>
             
-            <h1 data-zh="你好，我是 JIANG Hanbing" data-en="Hi, I&#x27;m JIANG Hanbing"  class="hero-title">你好，我是 JIANG Hanbing</h1>
-            <p data-zh="欢迎来到我的像素世界：游戏叙事、互动体验与活动策划。" data-en="Welcome to my pixel world!"  class="hero-subtitle">欢迎来到我的像素世界：游戏叙事、互动体验与活动策划。</p>
+            <h1 class="hero-title" data-zh="你好，我是蒋寒冰">Hi, I'm JIANG Hanbing</h1>
+            <p class="hero-subtitle" data-zh="欢迎来到我的像素世界！">Welcome to my pixel world!</p>
             
-            <a data-zh="查看我的作品 ↓" data-en="Let&#x27;s start our journey"  href="#portfolio" class="pixel-button">查看我的作品 ↓</a>
+            <a href="#portfolio" class="pixel-button" data-zh="一起出发吧">Let's start our journey</a>
         </section>
         
         <!-- Portfolio Section -->
         <section id="portfolio" class="portfolio">
-            <h2 data-zh="精选作品" data-en="My Portfolio"  class="portfolio-title">精选作品</h2>
+            <h2 class="portfolio-title" data-zh="我的作品集">My Portfolio</h2>
             
             <div class="portfolio-grid">
                 <!-- Portfolio Item 1 -->
                 <a href="project1.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
                     <div class="portfolio-image" style="background: url('image/image1.png') no-repeat center; background-size: cover;"></div>
-                    <h3 data-zh="灾难：新的平衡" data-en="Catastrophe Merely a fresh balance" >灾难：新的平衡</h3>
-                    <p data-zh="视觉小说游戏 Demo｜以动物视角探索生存与生态平衡，呈现叙事概念、角色设计与交互原型。" data-en="This is a visual novel game demo." >视觉小说游戏 Demo｜以动物视角探索生存与生态平衡，呈现叙事概念、角色设计与交互原型。</p>
+                    <h3 data-zh="灾难，只不过是一次新的稳定">Catastrophe Merely a fresh balance</h3>
+                    <p data-zh="科幻文字游戏 · 教育导向 · AI生成美术">This is a visual novel game demo.</p>
                 </a>
                 
                 <!-- Portfolio Item 2 -->
                 <a href="project2.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
                     <div class="portfolio-image" style="background: url('image/image2.jpg') no-repeat center; background-size: cover;"></div>
-                    <h3 data-zh="声音漫游计划" data-en="Sound Roaming Plan" >声音漫游计划</h3>
-                    <p data-zh="互动艺术装置｜以网页连接声音上传、二维码生成与线下交换，呈现参与流程和线上推广策划。" data-en="This is an artistic interactive installation that uses a webpage for interaction during the exhibition." >互动艺术装置｜以网页连接声音上传、二维码生成与线下交换，呈现参与流程和线上推广策划。</p>
+                    <h3 data-zh="声音流浪计划">Sound Roaming Plan</h3>
+                    <p data-zh="《一次对耳机的反叛》展览现场的互动装置。">This is an artistic interactive installation that uses a webpage for interaction during the exhibition.</p>
                 </a>
                 
                 <!-- Portfolio Item 3 -->
-                <a href="project3.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
-                    <div class="portfolio-image" style="background: url('assets/roco/event-overview.png') no-repeat center; background-size: cover;"></div>
-                    <h3 data-zh="洛克王国·世界｜夏日生态调查" data-en="Roco Kingdom: World | Summer Ecology Survey" >洛克王国·世界｜夏日生态调查</h3>
-                    <p data-zh="活动运营策划｜以精灵陪伴串联探索、任务与摄影，包含活动方案、任务剧本和界面原型。" data-en="Live-ops concept | Companion-led exploration, quests and photography, with an event plan, quest script and UI wireframes." >活动运营策划｜以精灵陪伴串联探索、任务与摄影，包含活动方案、任务剧本和界面原型。</p>
+                <a href="roco-preview/index.html" class="portfolio-item pixel-border" style="display:block; text-decoration:none; color:inherit;">
+                    <div class="portfolio-image" style="background: url('roco-preview/assets/summer-photo.png') no-repeat center; background-size: cover;"></div>
+                    <h3 data-zh="洛克王国·世界：夏日生态调查">Roco Kingdom: Summer Ecology Survey</h3>
+                    <p data-zh="暑期赛季中期活跃运营与精灵关系养成活动。">A live-ops concept for companion bonding and open-world exploration.</p>
                 </a>
             </div>
         </section>
         
         <!-- Footer -->
         <footer>
-            <p data-zh="© 2026 JIANG Hanbing · 个人作品集" data-en="© 2025 JIANG Hanbing. All rights reserved." >© 2026 JIANG Hanbing · 个人作品集</p>
+            <p data-zh="© 2025 JIANG Hanbing. 版权所有。">&copy; 2025 JIANG Hanbing. All rights reserved.</p>
         </footer>
     </main>
 </body>
