@@ -126,15 +126,6 @@
             box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
         }
         
-        /* Event Flow 部分 */
-        .event-flow-section {
-            background-color: var(--secondary);
-            padding: 2rem;
-            border: 2px solid var(--accent);
-            margin-bottom: 3rem;
-            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
-        }
-        
         /* Online Promotional Planning 部分 */
         .promotional-section {
             background-color: var(--primary);
@@ -144,6 +135,22 @@
             box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
         }
         
+        .embedded-video {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            margin-top: 1.5rem;
+            border: 2px solid var(--accent);
+            background: #000;
+            box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .embedded-video iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
         /* 视频链接样式 */
         .video-link {
             display: inline-block;
@@ -269,17 +276,7 @@
             </p>
         </section>
         
-        <!-- Event Flow 部分 -->
-        <section class="event-flow-section">
-            <h2 class="section-title" data-zh="参与流程">Event Flow</h2>
-            <p class="description-text" data-zh="录制或上传声音 → 生成声音二维码 → 张贴在展览现场 → 由其他观众带走。">
-                The event flow demonstrates how users interact with the Sound Roaming Plan installation, 
-                from initial engagement to the completion of the sound exchange process.
-            </p>
-            <img src="portfolio2/1.png" alt="Event Flow Diagram" class="full-width-image">
-        </section>
-        
-        <!-- Online Promotional Planning 部分 - 已更新为两张图片 -->
+<!-- Online Promotional Planning 部分 - 已更新为两张图片 -->
         <section class="promotional-section">
             <h2 class="section-title" data-zh="线上宣传策划">Online Promotional Planning</h2>
             <p class="description-text" data-zh="为了鼓励大家上传音频，我们特地编辑了一段小故事，以互动推文的形式吸引观众。">
@@ -293,8 +290,8 @@
                 <img src="portfolio2/3.png" alt="Online Promotional Planning 2" class="grid-image">
             </div>
             
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="https://www.youtube.com/watch?v=r0HnG3Puhc4" target="_blank" class="video-link" data-zh="观看推广视频（YouTube）">Watch Promotional Video</a>
+            <div class="embedded-video">
+                <iframe src="https://www.youtube.com/embed/r0HnG3Puhc4" title="声音流浪计划宣传视频 / Sound Roaming Plan promotional video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </section>
         
