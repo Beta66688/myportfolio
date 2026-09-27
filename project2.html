@@ -8,7 +8,7 @@
     <style>
         /* Base Styles */
         :root {
-            --primary: #ffb6e1;
+            --primary: #fff0b3;
             --secondary: #fff0b3;
             --accent: #333333;
             --text-dark: #222222;
@@ -24,7 +24,7 @@
         
         body {
             font-family: 'Silkscreen', 'VT323', monospace;
-            background: linear-gradient(to right, var(--secondary) 0%, var(--secondary) 30%, var(--primary) 30%, var(--primary) 100%);
+            background: var(--secondary);
             color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
@@ -215,7 +215,7 @@
         /* 响应式设计 */
         @media (max-width: 768px) {
             body {
-                background: linear-gradient(to bottom, var(--secondary) 0%, var(--secondary) 30%, var(--primary) 30%, var(--primary) 100%);
+                background: var(--secondary);
             }
             
             .project-title {
@@ -301,7 +301,9 @@
             <p style="font-size: 1.4rem; margin-bottom: 1.5rem;" data-zh="观看声音流浪计划的演示视频。">
                 Watch the demonstration video to see how the Sound Roaming Plan works in practice.
             </p>
-            <a href="https://www.youtube.com/watch?v=rTpyaWoXu40" target="_blank" class="video-link" data-zh="观看演示视频（YouTube）">Watch Demo Video</a>
+            <div class="embedded-video">
+                <iframe src="https://www.youtube.com/embed/rTpyaWoXu40" title="声音流浪计划体验演示 / Sound Roaming Plan demonstration" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
         </section>
         
         <!-- 导航按钮 -->
