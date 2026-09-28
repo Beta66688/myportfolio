@@ -244,7 +244,19 @@
                 align-items: center;
             }
         }
-    </style>
+    
+        .marketing-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem;align-items:start}
+        .campaign-reference,.account-qr{margin:0}
+        .campaign-reference img{display:block;width:100%;height:auto;border:2px solid var(--accent)}
+        .campaign-reference figcaption,.account-qr figcaption{font-size:1rem;line-height:1.6;padding-top:1rem}
+        .campaign-copy h3{font-size:1.5rem;margin-bottom:.75rem}
+        .account-qr{display:flex;align-items:center;gap:1rem;margin-top:1.5rem;flex-wrap:wrap}
+        .account-qr img{width:215px;height:215px;max-width:100%;object-fit:contain;background:#fff;border:2px solid var(--accent)}
+        .account-qr figcaption{flex:1;min-width:150px}
+        .account-qr span{display:block;margin-top:.5rem}
+        @media(max-width:768px){.marketing-grid{grid-template-columns:1fr}.project-container{padding:1.25rem}.description-section,.promotional-section,.video-section{padding:1.25rem}.account-qr{justify-content:center}.account-qr figcaption{text-align:center}}
+
+</style>
 <link rel="stylesheet" href="language-only.css">
 <script src="language-only.js" defer></script>
 </head>
@@ -276,6 +288,20 @@
             </p>
         </section>
         
+
+        <section class="description-section" id="marketing">
+            <h2 class="section-title" data-zh="公众号内容运营">WeChat Content Marketing</h2>
+            <p class="description-text" data-zh="以 Healingtopia 公众号为宣传入口，用故事化内容和声音共创，吸引读者参与《一次对耳机的反叛》线下展览。">Healingtopia connects editorial storytelling and audience participation with the offline exhibition, The Silence of the Sound.</p>
+            <div class="marketing-grid">
+                <figure class="campaign-reference"><img src="healingtopia-posts.png" alt="Healingtopia 公众号推文：艺术家留声机与声音共创" loading="lazy"><figcaption data-zh="声音共创推文：阅读 749 · 赞 26（截图时数据）">Sound co-creation post: 749 reads · 26 likes, as shown in the screenshot.</figcaption></figure>
+                <div class="campaign-copy">
+                    <h3 data-zh="内容吸引">Content Hook</h3><p class="description-text" data-zh="通过小故事与 SVG 互动推文介绍玩法，让读者先产生好奇，再尝试上传自己的声音。">A short story and an interactive SVG article introduce the activity and invite readers to contribute their own sounds.</p>
+                    <h3 data-zh="引导到场">Offline Invitation</h3><p class="description-text" data-zh="将线上投稿变成展馆里的声音二维码，让读者有理由带朋友到现场，听见彼此的留言。">Audio contributions become QR codes at the exhibition, giving readers a reason to visit with friends and listen to each other's messages.</p>
+                    <figure class="account-qr"><img src="healingtopia-qr.jpg" alt="Healingtopia 微信公众号二维码" width="430" height="430" loading="lazy"><figcaption><strong>Healingtopia</strong><span data-zh="用微信扫码，查看公众号推文">Scan with WeChat to read the articles.</span></figcaption></figure>
+                </div>
+            </div>
+        </section>
+
 <!-- Online Promotional Planning 部分 - 已更新为两张图片 -->
         <section class="promotional-section">
             <h2 class="section-title" data-zh="线上宣传策划">Online Promotional Planning</h2>
