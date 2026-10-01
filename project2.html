@@ -144,12 +144,14 @@
             box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .embedded-video iframe {
+        .embedded-video iframe, .embedded-video video {
             display: block;
             width: 100%;
             height: 100%;
             border: 0;
         }
+
+        .embedded-video video { object-fit: contain; background: #000; }
 
         /* 视频链接样式 */
         .video-link {
@@ -317,7 +319,7 @@
             </div>
             
             <div class="embedded-video">
-                <iframe src="https://www.youtube.com/embed/r0HnG3Puhc4" title="声音流浪计划宣传视频 / Sound Roaming Plan promotional video" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <video controls playsinline preload="metadata" aria-label="声音流浪计划宣传视频 / Sound Roaming Plan promotional video"><source src="sound-promotion.mp4" type="video/mp4"><span data-zh="你的浏览器暂不支持视频播放，请使用新版浏览器。">Your browser does not support this video. Please use an updated browser.</span></video>
             </div>
         </section>
         
